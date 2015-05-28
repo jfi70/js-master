@@ -9,10 +9,7 @@ function _extends(_sub, _super) {
 /**
  * @constructor
  */
-function MyBaseClass(){
-    /** @member {string} */
-    this.idx = "11";
-}
+function MyBaseClass(){}
 
 MyBaseClass.prototype.doSomething = function() {
     console.log("did something...");
@@ -21,15 +18,12 @@ MyBaseClass.prototype.doSomething = function() {
 /**
  * @extends {MyBaseClass}
  */
-function MyClass(){
-    _extends(this,MyBaseClass);
-}
-
+function MyClass(){}
+_extends(MyClass,MyBaseClass);
 
 MyClass.prototype.doSomething = function () {
-    console.log("did something different... id = ",this.idx);
+    console.log("did something different...");
 };
 
 var o = new MyClass();
-
 o.doSomething();
