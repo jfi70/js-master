@@ -33,7 +33,7 @@ Audio.prototype.log = function() {
  *
  */
 
-var RtcAudio = (function(_super){
+var RtcAudio = ( function(_super){
 
     _extends(RtcAudio, _super);
 
