@@ -11,6 +11,10 @@
 <script>
 
     CanvasRenderingContext2D.prototype.strokeAtcNdb = function (x, y) {
+
+        x = Math.floor(x) - 0.5;
+        y = Math.floor(y) - 0.5 ;
+
         this.save();
         this.beginPath();
         this.rect(x - 0.25, y - 0.25, 0.5, 0.5);
@@ -18,12 +22,12 @@
 
         //  this.setLineDash([0.5,0.5]);
         this.beginPath();
-        this.arc(x, y, 2.0, 0, Math.PI * 2);
+        this.arc(x, y, 3.0, 0, Math.PI * 2);
         this.stroke();
 
         this.setLineDash([1, 1]);
         this.beginPath();
-        this.arc(x, y, 3.5, 0, Math.PI * 2);
+        this.arc(x, y, 4.5, 0, Math.PI * 2);
         this.stroke();
 
         this.setLineDash([1, 1]);
@@ -45,8 +49,11 @@
         this.save();
         this.lineJoin = "bevel";
 
+        x = Math.floor(x) - 0.5;
+        y = Math.floor(y) - 0.5 ;
+
         x = x - 4;
-        y = y + 3;
+        y = y + 4;
 
         this.beginPath();
         this.moveTo(x, y);
@@ -62,6 +69,9 @@
 
 
     CanvasRenderingContext2D.prototype.strokeAtcVor = function (x, y) {
+
+        x = Math.floor(x) - 0.5;
+        y = Math.floor(y) - 0.5 ;
 
         this.save();
         this.lineJoin = "bevel";
@@ -117,8 +127,8 @@
         ctx.rect(25.0, 10.0, 10.0, 10.0);
         ctx.stroke();
 
-        var x = 15.5;
-        var y = 40.5;
+        var x = 15;
+        var y = 40;
 
 
         ctx.strokeAtcNdb(x, y);
